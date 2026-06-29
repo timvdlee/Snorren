@@ -1,0 +1,54 @@
+
+// Map variant to index
+export const variantMapper={
+    "Standaard":0,
+    "Circus":1,
+    "Piraten":2,
+    "Viking":3
+};
+
+
+export const roleMapper={ 
+    "_burger":["Burger","Bezoeker","Matroos","Viking"],
+    "_ziener":["Ziener","Goochelaar", "Hofmeester","Odin"],
+    "_beschermer":["Beschermer","Circusleeuw", "Scheepshond","Walkure"],
+    "_beschermgod":["Beschermgod","Leeuwentemmer", "Hondenmeester","Norn"],
+    "_priester":["Priester","Acrobaat", "Bootsman","Thor"],
+    "_jager":["Jager","Messenwerper", "Wapensmid","Sindri"],
+    "_scooterjeugd":["Scooterjeugd","Clown", "Dronkaard","Beschonken Viking"],
+    "_snor":["Snor","Weerwolf","Piraat","Handlanger Loki"],
+    "_alphaSnor":["Alpha Snor","Snorweerwolf","Snorbaard","Loki"],
+    "_manMetPlakSnor":["Man met Plaksnor","Behaarde Man","Matroos met ooglapje","Vidar"],
+    "_zelfmoordterrorist":["Zelfmoordterrorist","Levende Kanonskogel","Zelfmoordterrorist","Berserker"],
+    "_prinsCarnaval":["Prins Carnaval","Prins Carnaval","Rumbaard","Mede Brouwer"],
+    "_burgemeester":["Burgemeester","Circusdirecteur","Kapitein","Jarl"],
+    "_geliefden":["Geliefden","Geliefden","Geliefden","Geliefden"],
+    "_snorren":["Snorren","Weerwolven","Piraten","Loki en zijn handlangers"],
+    "_burgers":["Burgers","Bezoekers","Matrozen","Vikingen"]
+
+};
+
+
+export const playerCountMap = {
+    8:["_ziener","_beschermer","_beschermgod","_priester","_jager","_scooterjeugd","_alphaSnor","_snor"],
+    9:["_ziener","_beschermer","_beschermgod","_priester","_jager","_scooterjeugd","_alphaSnor","_snor","_manMetPlakSnor"],
+    10:["_ziener","_beschermer","_beschermgod","_priester","_jager","_scooterjeugd","_alphaSnor","_snor","_manMetPlakSnor","_zelfmoordterrorist"],
+    11:["_ziener","_beschermer","_beschermgod","_priester","_jager","_scooterjeugd","_alphaSnor","_snor","_manMetPlakSnor","_zelfmoordterrorist","_snor"],
+    12:["_ziener","_beschermer","_beschermgod","_priester","_jager","_scooterjeugd","_alphaSnor","_snor","_manMetPlakSnor","_zelfmoordterrorist","_snor","_prinsCarnaval"],
+    13:["_ziener","_beschermer","_beschermgod","_priester","_jager","_scooterjeugd","_alphaSnor","_snor","_manMetPlakSnor","_zelfmoordterrorist","_snor","_prinsCarnaval","_burger"],
+    14:["_ziener","_beschermer","_beschermgod","_priester","_jager","_scooterjeugd","_alphaSnor","_snor","_manMetPlakSnor","_zelfmoordterrorist","_snor","_prinsCarnaval","_burger","_burger"],
+    15:["_ziener","_beschermer","_beschermgod","_priester","_jager","_scooterjeugd","_alphaSnor","_snor","_manMetPlakSnor","_zelfmoordterrorist","_snor","_prinsCarnaval","_burger","_burger","_burger"],
+    16:["_ziener","_beschermer","_beschermgod","_priester","_jager","_scooterjeugd","_alphaSnor","_snor","_manMetPlakSnor","_zelfmoordterrorist","_snor","_prinsCarnaval","_burger","_burger","_burger","_snor"],
+    17:["_ziener","_beschermer","_beschermgod","_priester","_jager","_scooterjeugd","_alphaSnor","_snor","_manMetPlakSnor","_zelfmoordterrorist","_snor","_prinsCarnaval","_burger","_burger","_burger","_snor","_burger"],
+    18:["_ziener","_beschermer","_beschermgod","_priester","_jager","_scooterjeugd","_alphaSnor","_snor","_manMetPlakSnor","_zelfmoordterrorist","_snor","_prinsCarnaval","_burger","_burger","_burger","_snor","_burger","_burger"],
+};
+
+export const roleGroups = {
+    "_snorren":["_alphaSnor","_snor"],
+    "_burgers":["_burger"],
+
+};
+
+export const nacht0Volgorde = ["_beschermer","_beschermgod","_scooterjeugd","_priester","_geliefden","_jager","_zelfmoordterrorist","_prinsCarnaval","_manMetPlakSnor","_snorren","_ziener","_burgers"]
+
+export const nachtxVolgorde = ["_ziener","_beschermer","_beschermgod","_scooterjeugd","_snorren","_alphaSnor"]
