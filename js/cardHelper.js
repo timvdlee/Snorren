@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function startSpel() {
-    localStorage.setItem("gameData", JSON.stringify(onThemaPlayerCountChange())); // Store the latest roles in localStorage
+    localStorage.setItem("gameData", JSON.stringify(onThemaPlayerCountChange(true))); // Store the latest roles in localStorage
     location.href = "nacht1/";
     // Pass through variables to new page
 
@@ -27,7 +27,7 @@ function startSpel() {
 
 
 
-function onThemaPlayerCountChange() {
+function onThemaPlayerCountChange(buttonLaunch=false) {
     console.log("Thema or player count changed");
     const themaSelector = document.getElementById("themaSelect");
     const playerNumberSelector = document.getElementById("aantalSpelersSelect");
@@ -38,13 +38,17 @@ function onThemaPlayerCountChange() {
     console.log("Selected Thema:", selectedThema, "Index:", themaIndex);
     console.log("Selected Player Count:", selectedPlayerCount);
 
-    const rawRoles = playerCountMap[selectedPlayerCount];
+    let rawRoles = playerCountMap[selectedPlayerCount];
     console.log("Raw Roles:", rawRoles);
     const mappedRoles = rawRoles.map(roleKey => roleMapper[roleKey][themaIndex]);
     console.log("Mapped Roles:", mappedRoles);
 
     const roleListElement = document.getElementById("roleList"); 
     roleListElement.innerHTML = ""; // Clear the list
+    // Add two "_geliefde" roles when initialized on a button press
+    if (buttonLaunch == true) {
+        rawRoles.push("_geliefde", "_geliefde");
+    }
 
     const countedRoles = rawRoles.reduce((acc, role) => {
         acc[role] = (acc[role] || 0) + 1;
@@ -55,7 +59,7 @@ function onThemaPlayerCountChange() {
     for (const [role, count] of Object.entries(countedRoles)) {
         const listItem = document.createElement("li");
         listItem.textContent = `${roleMapper[role][themaIndex]} (${count}x)`;
-        roleListElement.appendChild(listItem);
+            roleListElement.appendChild(listItem);
     }
 
 

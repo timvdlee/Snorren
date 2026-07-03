@@ -7,6 +7,35 @@ export const variantMapper={
     "Viking":3
 };
 
+export const firstNightTooltip={
+    "_burger":"Laat ze hun hand opsteken",
+    "_ziener":"Kies een speler en bekijk zijn/haar rol",
+    "_beschermer":"Kies een speler en bescherm hem/haar voor de nacht tegen ${_snorren}",
+    "_beschermgod":"Verplaats éénmalig de bescherming van de ${_beschermer} naar een andere speler",
+    "_priester": "Kies twee geliefden",
+    "_jager": "Mag iemand meenemen in de dood als je sterft",
+    "_scooterjeugd": "Kan eenmalig de nacht verstoren waardoor ${_snorren} niemand kunnen vermoorden",
+    "_snor": "Wordt wakker en kies een speler om te vermoorden",
+    "_alphaSnor":"Wordt wakker en kies een speler om te vermoorden",
+    "_manMetPlakSnor": "Mag wakker worden met ${_snorren} maar zijn stem telt niet mee. Heeft als toel te winnen met de ${_burgers}",
+    "_zelfmoordterrorist": "Mag zichzelf opblazen en neemt de twee personen naast hem mee in de dood.",
+    "_prinsCarnaval": "Mag eenmalig de polonaise uitroepen. Doet verder niks maar is wel grappig",
+    "_burgemeester": "Hou verkiezingen indien er geen ${_burgemeester} is",
+    "_geliefden": "Je mag nooit op elkaar stemmen. Als één van jullie sterft, sterft de ander ook. Jullie doel is om samen te winnen.",
+    "_geliefde": "Je bent verliefd op de andere geliefde.",
+    "_snorren": "Worden de eerste nacht wakker op te bepalen wie ze in elkaar gaan slaan! Betekend niks maar is wel persoonlijk.",
+    "_burgers": "Laat ze niet wakker worden maar laat ze alleen hun hand opsteken en noteer hun naam"
+
+}
+
+export const nightTooltip={
+    "_ziener": "Kies een speler om zijn/haar rol te bekijken",
+    "_beschermer": "Kies een speler om te beschermen tegen de ${_snorren}",
+    "_beschermgod": "Wil je de bescherming van de ${_beschermer} verplaatsen naar een andere speler?",
+    "_scooterjeugd": "Wil je de nacht verstoren waardoor de ${_snorren} niemand kunnen vermoorden?", 
+    "_snorren": "Word wakker en kies een speler om te vermoorden — Indien er de vorige ronde een ${_snor} is overleden mag de ${_alphaSnor} een speler naar keuze in een snor veranderen",
+    "_alphaSnor": "Kies een speler om te veranderen in een snor"
+}
 
 export const roleMapper={ 
     "_burger":["Burger","Bezoeker","Matroos","Viking"],
@@ -23,7 +52,8 @@ export const roleMapper={
     "_prinsCarnaval":["Prins Carnaval","Prins Carnaval","Rumbaard","Mede Brouwer"],
     "_burgemeester":["Burgemeester","Circusdirecteur","Kapitein","Jarl"],
     "_geliefden":["Geliefden","Geliefden","Geliefden","Geliefden"],
-    "_snorren":["Snorren","Weerwolven","Piraten","Loki en zijn handlangers"],
+    "_geliefde":["Geliefde","Geliefde","Geliefde","Geliefde"],
+    "_snorren":["De Snorren","De Weerwolven","De Piraten","Loki en zijn handlangers"],
     "_burgers":["Burgers","Bezoekers","Matrozen","Vikingen"]
 
 };
@@ -46,6 +76,7 @@ export const playerCountMap = {
 export const roleGroups = {
     "_snorren":["_alphaSnor","_snor"],
     "_burgers":["_burger"],
+    "_geliefden":["_geliefde"],
 
 };
 
