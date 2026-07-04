@@ -6,6 +6,7 @@ let isKnopGeklikt = false;
 document.addEventListener("DOMContentLoaded", function() {
     populatePlayers();
     const endNacht1Button = document.getElementById("endNacht1Button");
+    translateTranslatableTargerts();
     
 });
 if (preventReloadFlag) {
@@ -16,6 +17,14 @@ if (preventReloadFlag) {
             return "Weet je zeker dat je deze pagina wilt verlaten? Je gegevens zullen verloren gaan.";
         }
     };
+}
+
+
+function translateTranslatableTargerts() {
+    const translatableElements = document.querySelectorAll('.translationTarget');
+    translatableElements.forEach(element => {
+        element.textContent = translateToolTip(element.textContent);
+    });
 }
 
 

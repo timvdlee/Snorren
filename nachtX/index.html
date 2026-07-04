@@ -40,12 +40,39 @@
         <div class="container">
             <div id="dayContainer" class="container">
                 <h3>Dag</h3>
+                <br>
                 <div>
-                    <h5 id="groupName">NaamRole</h5>
-                    <h7 id="roleTooltip">ToolTip</h7>
+                    <h5 id="roleName">Overledenen</h5>
+                    <h7 id="roleTooltip" class="translationTarget">Maak bekend wie er vanacht is overleden door ${_snorren}</h7>
+                </div>
+                <br>
+                <div>
+                    <h5 id="dayBurgemeesterName" class="translationTarget">De ${_burgemeester} leidt de discussie</h5>
+                    <h7 id="dayBurgemeesterToolTip" class="translationTarget">Laat de ${_burgemeester} de discussie leiden over wie er naar ${_priester} wordt gestuurd. Indien er geen burgemeester is hou dan verkiezingen voor de ${_burgemeester}.</h7>
+                </div>
+                <br>
+                <div>
+                    <h5 id="dayPriesterName" class="translationTarget">Middagdutje & ${_priester}</h5>
+                    <h7 id="dayPriesterToolTip" class="translationTarget">Alle spelers gaan slapen en (de) ${_priester} mag wakker worden en kiezen of hij deze speler wilt redden. Alleen "goede" spelers kunnen gered worden.</h7>
+                </div>
+                <br>
+                <div>
+                    <h5 id="dayReveal" class="translationTarget">Resultaat van middagdutje</h5>
+                    <h7 id="dayRevealToolTip" class="translationTarget">Alle spelers worden weer wakker. Of de speler ${_priester} heet overleefd wordt nu bekend gemaakt.</h7>
                 </div>
 
             </div>
+        <br>
+            <div id="nachtContainer" class="container">
+                <h3>Nacht</h3>
+                <br>
+                <div>
+                    <h5 id="roleName">Wakker worden</h5>
+                    <h7 id="roleTooltip" class="translationTarget">Laat de spelers een voor een wakker worden. Tenzij ze ${_burger} zijn. Laat ze dan hun hand opsteken!</h7>
+            </div>
+
+
+        </div>
 
         </div>
         <br>
