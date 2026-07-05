@@ -1,0 +1,13 @@
+.btn-outline-light:hover, 
+.btn-outline-light:focus, 
+.btn-outline-light:active {
+    background-color: transparent !important;
+    color: #f8f9fa !important; /* De standaard Bootstrap lichtgrijze tekstkleur */
+}
+
+/* Zorg dat de ingekleurde knop direct goed reageert */
+.btn-light:hover, 
+.btn-light:focus {
+    background-color: #f8f9fa !important;
+    color: #212529 !important;
+}

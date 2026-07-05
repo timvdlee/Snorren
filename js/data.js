@@ -30,11 +30,11 @@ export const firstNightTooltip={
 
 export const nightTooltip={
     "_ziener": "Kies een speler om zijn/haar rol te bekijken",
-    "_beschermer": "Kies een speler om te beschermen tegen de ${_snorren}",
+    "_beschermer": "Kies een speler om te beschermen tegen ${_snorren}",
     "_beschermgod": "Wil je de bescherming van de ${_beschermer} verplaatsen naar een andere speler?",
-    "_scooterjeugd": "Wil je de nacht verstoren waardoor de ${_snorren} niemand kunnen vermoorden?", 
-    "_snorren": "Word wakker en kies een speler om te vermoorden — Indien er de vorige ronde een ${_snor} is overleden mag de ${_alphaSnor} een speler naar keuze in een snor veranderen",
-    "_alphaSnor": "Kies een speler om te veranderen in een snor"
+    "_scooterjeugd": "Wil je de nacht verstoren waardoor ${_snorren} niemand kunnen vermoorden?", 
+    "_snorren": "Word wakker en kies een speler om te vermoorden. — Indien er de vorige ronde een ${_snor} is overleden mag de ${_alphaSnor} een speler naar keuze in een ${_snor} veranderen",
+    "_alphaSnor": "Kies een speler om te veranderen in een ${_snor}. Dit mag alleen als er de vorige ronde een ${_snor} is overleden.",
 }
 
 export const roleMapper={ 
@@ -45,9 +45,9 @@ export const roleMapper={
     "_priester":["Priester","Acrobaat", "Bootsman","Thor"],
     "_jager":["Jager","Messenwerper", "Wapensmid","Sindri"],
     "_scooterjeugd":["Scooterjeugd","Clown", "Dronkaard","Beschonken Viking"],
-    "_snor":["Snor","Weerwolf","Piraat","Handlanger Loki"],
+    "_snor":["Snor","Weerwolf","Piraat","Handlanger van Loki"],
     "_alphaSnor":["Alpha Snor","Snorweerwolf","Snorbaard","Loki"],
-    "_manMetPlakSnor":["Man met Plaksnor","Behaarde Man","Matroos met ooglapje","Vidar"],
+    "_manMetPlakSnor":["De Man met Plaksnor","De Behaarde Man","De Matroos met ooglapje","Vidar"],
     "_zelfmoordterrorist":["Zelfmoordterrorist","Levende Kanonskogel","Zelfmoordterrorist","Berserker"],
     "_prinsCarnaval":["Prins Carnaval","Prins Carnaval","Rumbaard","Mede Brouwer"],
     "_burgemeester":["Burgemeester","Circusdirecteur","Kapitein","Jarl"],

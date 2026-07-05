@@ -42,7 +42,7 @@ function saveNacht1Data() {
     const roleData = {};
     roleInputs.forEach(input => {
         const roleName = input.getAttribute("name");
-        roleData[roleName] = input.value;
+        roleData[roleName] = input.value.trim();
     });
     console.log(roleData);
     localStorage.setItem("rollenVanSpelers", JSON.stringify(roleData));

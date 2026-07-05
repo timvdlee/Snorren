@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Snorren Speltool</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="css/disableHover.css" rel="stylesheet">
+    <script type="module" src="js/nachtX.js" defer></script>
   </head>
   <body>
     <br>
@@ -30,77 +32,63 @@
 
         <div class="container">
             <h2> Spelers</h3>
-            <div id="spelersContainer">
-
+            <div id="spelersContainer" class="container">
+                <template id="playerStatusTemplate"> 
+                    <button type="button" id="playerStatus" name="PLACEHOLDER" role="PLACEHOLDER" alive=true class=" btn btn-light m-1">PLACEHOLDER</button>
+                </template>
             </div>
 
         </div>
 
-
+        <br>
         <div class="container">
-            <div id="dayContainer" class="container">
-                <h3>Dag</h3>
+            <div id="dayContainer" class="container border rounded p-3">
+                <h3>Dag ☀️</h3>
                 <br>
                 <div>
-                    <h5 id="roleName">Overledenen</h5>
-                    <h7 id="roleTooltip" class="translationTarget">Maak bekend wie er vanacht is overleden door ${_snorren}</h7>
+                    <h5 id="dayDeathName">Overledenen</h5>
+                    <h6 id="dayDeathToolTip" class="translationTarget">Maak bekend wie er vanacht is overleden door ${_snorren}</h6>
                 </div>
                 <br>
                 <div>
                     <h5 id="dayBurgemeesterName" class="translationTarget">De ${_burgemeester} leidt de discussie</h5>
-                    <h7 id="dayBurgemeesterToolTip" class="translationTarget">Laat de ${_burgemeester} de discussie leiden over wie er naar ${_priester} wordt gestuurd. Indien er geen burgemeester is hou dan verkiezingen voor de ${_burgemeester}.</h7>
+                    <h6 id="dayBurgemeesterToolTip" class="translationTarget">Laat de ${_burgemeester} de discussie leiden over wie er naar ${_priester} wordt gestuurd. Indien er geen ${_burgemeester} is hou dan verkiezingen.</h6>
                 </div>
                 <br>
                 <div>
                     <h5 id="dayPriesterName" class="translationTarget">Middagdutje & ${_priester}</h5>
-                    <h7 id="dayPriesterToolTip" class="translationTarget">Alle spelers gaan slapen en (de) ${_priester} mag wakker worden en kiezen of hij deze speler wilt redden. Alleen "goede" spelers kunnen gered worden.</h7>
+                    <h6 id="dayPriesterToolTip" class="translationTarget">Alle spelers gaan slapen en (de) ${_priester} mag wakker worden en kiezen of hij deze speler wilt redden. Alleen "goede" spelers kunnen gered worden.</h6>
                 </div>
                 <br>
                 <div>
                     <h5 id="dayReveal" class="translationTarget">Resultaat van middagdutje</h5>
-                    <h7 id="dayRevealToolTip" class="translationTarget">Alle spelers worden weer wakker. Of de speler ${_priester} heet overleefd wordt nu bekend gemaakt.</h7>
+                    <h6 id="dayRevealToolTip" class="translationTarget">Alle spelers worden weer wakker. Of de speler ${_priester} heeft overleefd wordt nu bekend gemaakt.</h6>
                 </div>
 
             </div>
         <br>
-            <div id="nachtContainer" class="container">
-                <h3>Nacht</h3>
-                <br>
+            <div id="nachtContainer" class="container border rounded p-3">
+                <h3>Nacht 🌕</h3>
                 <div>
-                    <h5 id="roleName">Wakker worden</h5>
-                    <h7 id="roleTooltip" class="translationTarget">Laat de spelers een voor een wakker worden. Tenzij ze ${_burger} zijn. Laat ze dan hun hand opsteken!</h7>
-            </div>
+                    <template id="roleNameTemplate">
+                        <h5 id="roleName">ROLNAAM</h5>
+                        <sup id="multipleRoleField" hidden>NaamRol: naamSpeler</sup>
+                        <h6 id="roleTooltip" class="translationTarget">ROL TOOLTIP</h6>
+                        <br>
+                    </template>
+                </div>
 
+
+            </div>
 
         </div>
 
-        </div>
-        <br>
-        <br>
-        <div class="container mt-3">
-            <div class="d-grid gap-2">
-                <button id="endNacht1Button" class="btn btn-primary" type="button">Sla gegevens op en ga naar Nacht X</button>
-            </div>
-        </div>
-
-        <template id="nameFieldTemplate">
-            <h5 id="groupName">NaamRole</h5>
-            <h7 id="roleTooltip">ToolTip</h7>
-        </template>
-
-        <template id="roleTemplate">
-            <div id="roleInput" class="input-group mb-3">
-                <span class="input-group-text" id="naamRole">NaamRole</span>
-                <input id="roleInputField" type="text" class="form-control" placeholder="Naam van speler" aria-label="Username" aria-describedby="naamRole">
-            </div>
-        </template>
 
     </div>
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script type="module" src="js/nachtX.js"></script>
   
 
 
