@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const spelerToRoleMap = JSON.parse(localStorage.getItem("rollenVanSpelers"));
     if (!spelerToRoleMap) {
         console.error("No player-role mapping found in localStorage. Redirecting to main page.");
-        location.href = "../index.html";
+        location.href = window.location.origin + "/Snorren/";
     }
 
 

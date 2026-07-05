@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function startSpel() {
     localStorage.clear(); // Clear localStorage to remove any previous game data
     localStorage.setItem("gameData", JSON.stringify(onThemaPlayerCountChange(true))); // Store the latest roles in localStorage
-    location.href = "nacht1/";
+    location.href = window.location.origin + "/Snorren/nacht1/";
     // Pass through variables to new page
 
 }

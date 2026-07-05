@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     endNacht1Button.addEventListener("click", function() {
         isKnopGeklikt = true; // Zet de vlag op true vÓÓr het navigeren
         saveNacht1Data();
-        location.href = "../nachtX/";
+        location.href = window.location.origin + "/Snorren/nachtX/";
     });
 });
 if (preventReloadFlag) {
@@ -53,7 +53,7 @@ function populateRoleCounts() {
     const gameData = JSON.parse(localStorage.getItem("gameData"));
     if (!gameData) {
         console.error("No game data found in localStorage. Redirecting to main page.");
-        location.href = "../index.html";
+        location.href = window.location.origin + "/Snorren/";
     }
     console.log(gameData);
 
